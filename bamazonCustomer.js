@@ -29,7 +29,26 @@ connection.connect(function (error){
 
     console.log(connection);
     console.log(chalk.green(`Connected as ID: ${connection.threadId} `));
-    connection.end();
+    afterConnection();
 
 
 })
+
+
+function afterConnection(){
+    connection.query("SELECT * FROM products_list", function(error, data){
+        if (error){
+            console.log(chalk.red(`PRODUCTS could not be fetched from database`));
+            throw error;
+        }
+        //TODO: Use data to flesh out the product description. Works like an API
+        console.log(data);
+        connection.end();
+
+
+
+    });
+
+
+
+}
