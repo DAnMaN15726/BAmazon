@@ -11,7 +11,7 @@ product_name VARCHAR(30),
 
 department_name VARCHAR(20),
 
-price DECIMAL(10),
+price DECIMAL(10,2),
 
 stock_quantity INTEGER(3),
 

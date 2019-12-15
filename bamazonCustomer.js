@@ -42,7 +42,24 @@ function afterConnection(){
             throw error;
         }
         //TODO: Use data to flesh out the product description. Works like an API
-        console.log(data);
+        // console.log(data);
+
+        for (i = 0; i < data.length; i++){
+            console.log(chalk.green(`Product: ${data[i].product_name}`));
+            console.log(`Item ID: ${data[i].item_id}`);
+            console.log(chalk.whiteBright(`Price: $${data[i].price}`));
+            console.log(chalk.cyan(`Quantity: ${data[i].stock_quantity}`));
+            console.log(chalk.cyan(`----------------------------------`));
+            console.log(`\n`);
+
+
+
+        }
+        
+
+
+
+
         connection.end();
 
 
