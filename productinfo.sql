@@ -13,6 +13,8 @@ department_name VARCHAR(20),
 
 price DECIMAL(10,2),
 
+
+
 stock_quantity INTEGER(3),
 
 PRIMARY KEY (item_id)
