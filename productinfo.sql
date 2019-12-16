@@ -42,7 +42,7 @@ INSERT INTO products_list (product_name, department_name, price, stock_quantity)
 VALUES ("4k Projector", "Entertainment", 2500.00, 4);
 
 INSERT INTO products_list (product_name, department_name, price, stock_quantity)
-VALUES ("4k Projector", "Entertainment", 2500.00, 4);
+VALUES ("8k Projector", "Entertainment", 3500.00, 3);
 
 INSERT INTO products_list (product_name, department_name, price, stock_quantity)
 VALUES ("4k Camera", "Media", 1400.00, 6);

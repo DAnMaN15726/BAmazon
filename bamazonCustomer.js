@@ -163,7 +163,7 @@ function update(amountBuy, value, itemId, price){
     
 
     connection.query(`UPDATE products_list SET stock_quantity = ${value} WHERE item_id = ${itemId}`, function (error, response){
-        console.log(response);
+        // console.log(response);
 
 
     });
