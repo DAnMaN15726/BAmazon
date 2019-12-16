@@ -18,7 +18,11 @@
 3. Now choose a directory you want everything installed to. Right click the inside of the folder and click on "Git Bash Here". 
 
 4. Clone this repository using git command :
+https://github.com/DAnMaN15726/BAmazon.git
 
+
+5. Follow the video in the media section for a quick walkthrough on how to LAUNCH the node application. This applies to both
+bamazonCustomer.js and bamazonManager.js.
 
 
 
@@ -53,4 +57,4 @@ Thank you for reading.
 
 
 ### -Media-
-[![Alt text](https://www.youtube.com/watch?v=5kApjrs9tTw)
+[link text](https://www.youtube.com/watch?v=5kApjrs9tTw)
