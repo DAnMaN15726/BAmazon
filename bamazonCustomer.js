@@ -76,14 +76,30 @@ const ubuyNaow = [
     {
         type: "number",
         name: "choice",
-        message: "Choose which item you would like to buy! (Enter a Number!)"
+        message: "Choose which item you would like to buy! (Enter a Number!)",
+        validate: function(value) {
+            if (isNaN(value) === false && parseInt(value) > 0 && parseInt(value) <= 10) {
+              return true;
+            }
+            console.log("\n");
+            console.log(chalk.red("INVALID INPUT. ENTER A NUMBER BETWEEN 1 & 10"));
+            return inquire();
+          }
 
     },
     {
 
         type: "number",
         name: "quant",
-        message: "How many do you want to buy?"
+        message: "How many do you want to buy?",
+        validate: function(value) {
+            if (isNaN(value) === false && parseInt(value) > 0 && parseInt(value) <= 20) {
+              return true;
+            }
+            console.log("\n");
+            console.log(chalk.red("INVALID INPUT. ENTER A NUMBER BETWEEN 1 & 20"));
+            return inquire();
+          }
 
 
 
@@ -107,6 +123,7 @@ function inquire(){
     inquirer.prompt(ubuyNaow).then(function (response){
         
         let quantityBuy = response["quant"];
+        let id = response["choice"];
 
 
 
@@ -125,7 +142,7 @@ function inquire(){
 
 
 
-                update(response[0].stock_quantity - quantityBuy, response["choice"], quantityBuy * response[0].price);
+                update(quantityBuy,response[0].stock_quantity - quantityBuy, id, quantityBuy * response[0].price);
             }
 
 
@@ -141,8 +158,8 @@ function inquire(){
 }
 
 
-function update(value, itemId, price){
-    console.log(chalk.green(`${value} quantities of Item ID: ${itemId}, coming to a grand total of $${price} `));
+function update(amountBuy, value, itemId, price){
+    console.log(chalk.green(`${amountBuy} quantities of Item ID: ${itemId}, coming to a grand total of $${price} `));
     
 
     connection.query(`UPDATE products_list SET stock_quantity = ${value} WHERE item_id = ${itemId}`, function (error, response){
