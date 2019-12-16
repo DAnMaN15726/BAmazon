@@ -48,7 +48,7 @@ https://danman15726.github.io/Bootstrap-Portfolio/contact.html
 
 
 ### -Addendum-
-I, Danman15726, am the sole manager of this project, Liri. However, anyone and everyone can contribute because this application is open source. This app is not for resale, or injecting your own ads into. 
+I, Danman15726, am the sole manager of this project. However, anyone and everyone can contribute because this application is open source. This app is not for resale, or injecting your own ads into. 
 -Any spyware, malware or malicious intent will be met with the full force the law provides.-
 
 Thank you for reading.
